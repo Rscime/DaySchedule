@@ -23,14 +23,12 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-saveButton.on('click', function(){
-  // create key (hour) value (task) pair for storgae
-  let hour = $(this).parent().attr("id");
-  let savedTask = $(this).siblings(".description").val();
-  localStorage.setItem(hour,savedTask);
-  
-  console.log(savedTask);
-})
+  saveButton.on('click', function(e){
+    // create key (hour) value (task) pair for storgae
+    let hour = $(this).parent().attr("id");
+    let savedTask = $(this).siblings(".description").val();
+    localStorage.setItem(hour,savedTask);
+  });
 
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -38,23 +36,35 @@ saveButton.on('click', function(){
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   
-$('.time-block').each(function(){
-  var timeBlock = $('.time-block').attr('id');
-  if (timeBlock == currentHour){
-    $(this).addClass('present');
-  }
-  else if (timeBlock > currentHour){
-    $(this).addClass('future');
-  }
-  else if (timeBlock < currentHour){
-    $(this).addClass('past');
-  }
-})
+  $('.time-block').each(function(){
+    var timeBlock = $('.time-block').attr('id');
+    if (timeBlock == currentHour){
+      $(this).addClass('present');
+    }
+    else if (timeBlock > currentHour){
+      $(this).addClass('future');
+    }
+    else if (timeBlock < currentHour){
+      $(this).addClass('past');
+    }
+  });
 
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
+  $('#8 .description').val(localStorage.getItem("8"));
+  $('#9 .description').val(localStorage.getItem('9'));
+  $('#10 .description').val(localStorage.getItem('10'));
+  $('#11 .description').val(localStorage.getItem('11'));
+  $('#12 .description').val(localStorage.getItem('12'));
+  $('#13 .description').val(localStorage.getItem('13'));
+  $('#14 .description').val(localStorage.getItem('14'));
+  $('#15 .description').val(localStorage.getItem('15'));
+  $('#16 .description').val(localStorage.getItem('16'));
+  $('#17 .description').val(localStorage.getItem('17'));
+  $('#18 .description').val(localStorage.getItem('18'));
 
-  
-  // TODO: Add code to display the current date in the header of the page.
+  // $('.timeblock').each(function(){
+  //   localStorage.getItem()
+  // })
 });
