@@ -9,6 +9,7 @@ Create a simple calendar application that allows a user to save events for each 
 <img width="932" alt="image" src="https://github.com/Rscime/DaySchedule/assets/129807994/650f8cd5-caa3-4242-8d27-c419e5f34db8">
 
 ## Application link
+https://rscime.github.io/DaySchedule/
 
 ## Useage
 To plan out daily work tasks
