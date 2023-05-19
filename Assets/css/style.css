@@ -1,6 +1,25 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  background-color: antiquewhite;
+}
+
+.header{
+  padding: 25px;
+  background-image: url("../DayplannerBackground.jpg");
+  background-size: cover;
+  text-align: center;
+  color:#fffffb;
+  margin-bottom: 20px;
+}
+
+.subtitle{
+  font-size: 25px;
+}
+
+#currentDay{
+  font-size: 30px;
+  font-weight: 900;
 }
 
 textarea {
@@ -10,6 +29,11 @@ textarea {
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+}
+
+#currentHour{
+  color:#000000;
+  font-weight:bolder;
 }
 
 .description {
@@ -25,23 +49,26 @@ textarea {
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #810606;
+  color: #f3ebeb;
   border-top: 1px dashed #000000;
-}
+  font-weight: bold;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: antiquewhite;
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #fe5429;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #e6cd5f;
   color: white;
 }
 
@@ -49,7 +76,7 @@ textarea {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  background-color: #d54106;
   color: white;
 }
 
